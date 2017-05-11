@@ -1,0 +1,39 @@
+body{
+	font-family: "Helvetica","Arial",serif;
+	color: #333;
+	background-color: #ccc;
+	margin: 1em 10%;
+}
+
+h1{
+	color: #333;
+	background-color: transparent;
+}
+
+a{
+	color: #c60;
+	background-color: transparent;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul{
+	padding: 0;
+}
+li{
+	float: left;
+	padding: 1em;
+	list-style: none;
+}
+
+#placeholder{
+	display: block;
+	clear:both;
+	/*后期再考虑怎么让图片等比例适应外框*/
+	width: 700px;
+    height: 700px;
+}
+
+#imagegallery{
+	list-style: none;
+}

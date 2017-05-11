@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>fade</title>
+</head>
+<body>
+<div id="panel">
+	<h5 class="head">新闻标题</h5>
+	<div class="content">新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容</div>
+</div>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#panel h5.head").toggle(function(){
+			$(this).next().slideUp();
+		},function(){
+			$(this).next().slideDown();
+		});
+	});
+</script>
+</body>
+</html>

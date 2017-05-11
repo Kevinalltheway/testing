@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.v_content .v_content_list ul li{
+			display: inline-block;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+<div class="v_show">
+	<div class="v_caption">
+		<h2 class="cartoon" title="卡通动漫">卡通动漫</h2>
+		<div class="highlight_tip">
+			<span class="current">1</span>
+			<span class="current">2</span>
+			<span class="current">3</span>
+			<span class="current">4</span>
+		</div>
+		<div class="change_btn">
+			<span class="prev">上一页</span>
+			<span class="next">下一页</span>
+		</div>
+		<em><a href="#">more>></a></em>
+	</div>
+	<div class="v_content">
+		<div class="v_content_list">
+			<ul>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+				<li><a href="#"><img src="img/01.jpg" alt="海贼王" /></a><h4><a href="#">海贼王</a></h4><span>播放 <em>57,342</em></span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+(function(){
+	var page=4;
+var i=1;
+	$("span.next").click(function(){
+		var $parent=$(this).parents("div.v_show");
+		var $v_show=$parent.find("div.v_content_list");
+		var $v_content=$parent.find("div.v_content");
+
+		var v_width=$v_content.width();
+
+		var len=$v_show.find("li").length;
+		var page_count=Math.ceil(len/i);
+
+		if(!$v_show.is(":animate")){
+			if(page==page_count){
+			$v_show.animate({left:'0px'},"normal");
+			page=1;
+		}else{
+			$v_show.animate({left:'-='+v_width},"normal");
+			page++;
+		}
+		$parent.find("span").eq((page-1)).addClass("current").siblings().removeClass("current");
+		}
+		
+	});
+});
+</script>
+</body>
+</html>
